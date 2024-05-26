@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "fast-supabased-acl"
+name = "fastsupabased-acl"
 version = "0.1.0"
 description = "FastAPI Dependency for Supabase-based ACL using Supabase Roles"
 authors = ["Vinicius Mesel <4984147+vmesel@users.noreply.github.com>"]
