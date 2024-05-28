@@ -8,7 +8,7 @@ url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
 supabase: Client = create_client(url, key)
 
-async def token_auth(token: str):
+async def token_auth(token: Annotated[str, Header()]):
     if not token:
         raise HTTPException(status_code=400, detail="Token header required")
 
