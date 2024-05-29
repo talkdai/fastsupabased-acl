@@ -25,7 +25,7 @@ class FastSupabasedACL:
         self.role = role
 
     def __call__(self, user = Depends(token_auth)):
-        if self.role not in user.user.role:
+        if user.user.role not in self.role:
             raise HTTPException(status_code=403, detail="Unauthorized")
 
         return user
